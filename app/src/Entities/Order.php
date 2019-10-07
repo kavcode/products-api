@@ -26,6 +26,11 @@ class Order
     private $status;
 
     /**
+     * @ORM\Column(type="integer", name="user_id")
+     */
+    private $userId;
+
+    /**
      * @ORM\ManyToMany(targetEntity="Product")
      * @ORM\JoinTable(name="order_products",
      *      joinColumns={@ORM\JoinColumn(name="order_id", referencedColumnName="id")},
@@ -35,16 +40,23 @@ class Order
     private $products;
 
     public function __construct(
-        OrderStatus $status
+        OrderStatus $status,
+        int $userId
     )
     {
         $this->status = $status;
+        $this->userId = $userId;
         $this->products = new ArrayCollection();
     }
 
     public function getId(): int
     {
         return $this->id;
+    }
+
+    public function getUserId(): int
+    {
+        return $this->userId;
     }
 
     public function isNew(): bool

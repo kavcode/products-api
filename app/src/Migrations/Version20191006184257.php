@@ -43,6 +43,7 @@ final class Version20191006184257 extends AbstractMigration
             'CREATE TABLE orders (
                     id INTEGER NOT NULL AUTO_INCREMENT, 
                     status_id INTEGER NOT NULL, 
+                    user_id INTEGER NOT NULL,
                     PRIMARY KEY(id),
                     FOREIGN KEY (status_id) REFERENCES order_statuses(id) ON UPDATE CASCADE ON DELETE RESTRICT 
                 )'

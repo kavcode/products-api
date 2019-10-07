@@ -66,9 +66,13 @@ $container
     ->define('ProductFactory', function (Container $container) {
         return new \App\Services\ProductFactory();
     })
+    ->define('UserProvider', function (Container $container) {
+        return new \App\Services\UserProvider();
+    })
     ->define('OrderFactory', function (Container $container) {
         return new \App\Services\OrderFactory(
-            $container->get('OrderStatusRepository')
+            $container->get('OrderStatusRepository'),
+            $container->get('UserProvider')
         );
     })
     ->define(\App\Controllers\HomeController::class, function (Container $container) {

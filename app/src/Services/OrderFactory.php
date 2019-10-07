@@ -9,18 +9,22 @@ use App\Repositories\OrderStatusRepository;
 class OrderFactory
 {
     private $statusRepository;
+    private $userProvider;
 
     public function __construct(
-        OrderStatusRepository $statusRepository
+        OrderStatusRepository $statusRepository,
+        UserProvider $userProvider
     )
     {
         $this->statusRepository = $statusRepository;
+        $this->userProvider = $userProvider;
     }
 
     public function create(): Order
     {
         return new Order(
-            $this->statusRepository->getById(OrderStatus::CREATED)
+            $this->statusRepository->getById(OrderStatus::CREATED),
+            $this->userProvider->getCurrentUser()->getId()
         );
     }
 }
