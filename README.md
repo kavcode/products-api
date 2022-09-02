@@ -10,18 +10,21 @@
 
 ## Descrtiption
 
-Необходимо написать упрощённое REST API.
+Please make an application implements a simple example of REST API.
 
-Каркас приложения, должен быть стандартный MVC, реализованный через Controller, Entity, Repository, Service.
-API должно содержать 4 метода:
-1) Сгенерировать стартовый набор данных, генерируется 20 сущностей "товар", у которых есть идентификатор, название и цена.
-2) Метод получения всех существующих товаров.
-3) Создать заказ. Метод принимает набор идентификаторов существующих товаров. У заказа есть статус, который может быть в 2 состояниях: новый, оплачено. При создании заказа, по умолчанию выставляется статус "новый". При успешном создании заказа, метод должен возвращать этот номер в ответе на запрос.
-4) Оплатить заказ. Метод принимает на вход сумму и идентификатор заказа. Если сумма совпадает с суммой заказа и статус заказа "новый", то отправляем http запрос на сайт ya.ru, если статус запроса 200, то меняем статус заказа на "оплачено".
+The architecture of the app should fit the MVC pattern and consist of such an object as Controller, Entity, Repository, Service. 
 
-Таблицу пользователей делать не нужно, считаем, что пользователь всегда авторизирован под id=1, login=admin.
-Количество товаров в расчёт не берём, считаем, что их у нас бесконечное количество.
-Задачу нужно реализовать без фреймворков, никаких триггеров, процедур в mysql использовать нельзя, только обычные sql запросы и транзакции.
-Использовать сторонние отдельные библиотеки можно (например symfony router).
-Решение необходимо выложить на github или аналогичный сервис с системой контроля версий.
-Проект должен быть оформлен так, как будто выкладываете его в продакшн (никакого закомментированного кода, переменные называем сразу как надо и т.п.).
+API must have the following endpoints: 
+
+1. Generates the initial data set. It should create 20 items represented as "product". There are "id", "name" and "price" such a product has. 
+2. Returns all the products 
+3. Creates an order. This endpoint accepts a list of existing product ids. Also, an order has a status which could be one of "new" and "paid". 
+The "new" is default. If the order has been created successfully the endpoint must return its "number". 
+3. Accepting payment for an order. The endpoint assumes that it's given a sum and the order "id". 
+If the given sum is same as the order sum,  it needs to send a http request to an external service (must be defined via configuration). 
+When the external server returns `200 OK` the order status must become as "paid". 
+
+There is no need to manage around the user's functionality, let's assume the current user has an "id" equals 1, and they authenticated under the login "admin".
+Also, please skip handling the stock stuff like product's quantity, let's imagine they are infinite. 
+
+Please implement the API without using any framework, but it's available to use separate libraries (e.g. symfony router). Using mysql triggers and procedures are discouraged.    
