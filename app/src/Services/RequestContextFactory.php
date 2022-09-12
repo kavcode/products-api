@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use Symfony\Component\Routing\RequestContext;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class RequestContextFactory
 {

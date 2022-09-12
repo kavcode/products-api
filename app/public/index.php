@@ -112,4 +112,4 @@ $container
 /** @var \App\Services\Dispatcher $dispatcher */
 $dispatcher = $container->get('Dispatcher');
 $response = $dispatcher->dispatch($container->get('Request'));
-(new \Zend\HttpHandlerRunner\Emitter\SapiEmitter())->emit($response);
+(new \Laminas\HttpHandlerRunner\Emitter\SapiEmitter())->emit($response);

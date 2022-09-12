@@ -7,7 +7,7 @@ use App\Repositories\ProductRepository;
 use App\Services\OrderFactory;
 use App\Services\ResponseFactory;
 use Doctrine\ORM\EntityManager;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class CreateOrderController
 {

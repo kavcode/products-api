@@ -8,7 +8,7 @@
 λ docker-compose up
 ```
 
-## Descrtiption
+## Description
 
 Please make an application implements a simple example of REST API.
 

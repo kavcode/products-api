@@ -1,14 +1,14 @@
 {
     "require": {
-        "php": "^7.3",
+        "php": "^8.1",
         "ext-pdo": "*",
-        "symfony/routing": "^4.3",
-        "zendframework/zend-diactoros": "^2.1",
-        "doctrine/orm": "^2.6",
+        "symfony/routing": "^6.1",
+        "doctrine/orm": "^2.13",
         "guzzlehttp/guzzle": "^6.3",
-        "symfony/yaml": "^4.3",
-        "zendframework/zend-httphandlerrunner": "^1.1",
-        "doctrine/migrations": "2.0"
+        "symfony/yaml": "^6.1",
+        "doctrine/migrations": "^3.5",
+        "laminas/laminas-httphandlerrunner": "^2.1",
+        "laminas/laminas-diactoros": "^2.17"
     },
     "autoload": {
         "psr-4": {

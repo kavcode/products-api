@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Repositories\ProductRepository;
 use App\Services\ProductSerializer;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class ProductListController
 {

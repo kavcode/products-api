@@ -7,7 +7,7 @@ use App\Repositories\OrderRepository;
 use App\Repositories\OrderStatusRepository;
 use App\Services\PaymentGate;
 use Doctrine\ORM\EntityManager;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class CreatePaymentController
 {

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class HomeController
 {

@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use Zend\Diactoros\ServerRequest;
-use Zend\Diactoros\ServerRequestFactory;
+use Laminas\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequestFactory;
 
 class RequestFactory
 {

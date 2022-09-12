@@ -6,7 +6,7 @@ use App\Repositories\ProductRepository;
 use App\Services\ProductFactory;
 use App\Services\ProductSerializer;
 use Doctrine\ORM\EntityManager;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class InitController
 {

@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use Zend\Diactoros\Response;
+use Laminas\Diactoros\Response;
 
 class ResponseFactory
 {
