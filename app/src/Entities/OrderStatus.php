@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 class OrderStatus
 {
     public const CREATED = 1;
-    public const PAYED = 2;
+    public const PAID = 2;
 
     /**
      * @ORM\Id

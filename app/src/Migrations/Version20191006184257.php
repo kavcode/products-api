@@ -37,7 +37,7 @@ final class Version20191006184257 extends AbstractMigration
         );
 
         $this->addSql("INSERT INTO order_statuses (id, code) VALUES(1, 'new')");
-        $this->addSql("INSERT INTO order_statuses (id, code) VALUES(2, 'payed')");
+        $this->addSql("INSERT INTO order_statuses (id, code) VALUES(2, 'paid')");
 
         $this->addSql(
             'CREATE TABLE orders (

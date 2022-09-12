@@ -88,6 +88,6 @@ class Order
             throw new \DomainException('Order has wrong status');
         }
 
-        $this->status = $repository->getById(OrderStatus::PAYED);
+        $this->status = $repository->getById(OrderStatus::PAID);
     }
 }

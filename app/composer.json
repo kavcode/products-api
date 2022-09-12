@@ -8,7 +8,9 @@
         "symfony/yaml": "^6.1",
         "doctrine/migrations": "^3.5",
         "laminas/laminas-httphandlerrunner": "^2.1",
-        "laminas/laminas-diactoros": "^2.17"
+        "laminas/laminas-diactoros": "^2.17",
+        "symfony/cache": "^6.1",
+        "doctrine/annotations": "^1.13"
     },
     "autoload": {
         "psr-4": {
